@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardsViewController">
             <connections>
+                <outlet property="bottomBar" destination="i7L-bL-P0i" id="Qev-xr-ig3"/>
+                <outlet property="imageView" destination="ziM-yA-Ow1" id="YLK-fu-0ZG"/>
+                <outlet property="navBar" destination="t27-yv-dwx" id="OR9-Al-Gh5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,6 +33,10 @@
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ryan" translatesAutoresizingMaskIntoConstraints="NO" id="ziM-yA-Ow1">
                     <rect key="frame" x="8" y="78" width="584" height="381"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="ilt-Ez-QVH" appends="YES" id="tcv-Yk-eyS"/>
+                    </connections>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -52,6 +59,11 @@
                 </mask>
             </variation>
         </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="ilt-Ez-QVH">
+            <connections>
+                <action selector="onPanImage:" destination="-1" id="uey-u8-ypF"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
     <resources>
         <image name="action_buttons" width="320" height="108"/>

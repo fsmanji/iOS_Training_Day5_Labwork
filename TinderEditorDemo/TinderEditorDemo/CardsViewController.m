@@ -10,6 +10,12 @@
 
 @interface CardsViewController ()
 
+@property CGPoint cardInitialCenter;
+@property (weak, nonatomic) IBOutlet UIImageView *navBar;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIImageView *bottomBar;
+
 @end
 
 @implementation CardsViewController
@@ -17,21 +23,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    _imageView.userInteractionEnabled = YES;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)onPanImage:(UIPanGestureRecognizer *)sender {
+    switch (sender.state) {
+        case UIGestureRecognizerStateBegan:
+        {
+            _cardInitialCenter = _imageView.center;
+        }
+            break;
+        case UIGestureRecognizerStateChanged:
+        {
+            CGPoint transition = [sender translationInView:_imageView];
+            _imageView.center = CGPointMake(_cardInitialCenter.x +transition.x, _cardInitialCenter.y + transition.y);
+        }
+            break;
+        default:
+            break;
+    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
