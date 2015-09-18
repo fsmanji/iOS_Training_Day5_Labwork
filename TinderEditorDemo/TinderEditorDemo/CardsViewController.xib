@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardsViewController">
@@ -13,7 +13,49 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="navbar" translatesAutoresizingMaskIntoConstraints="NO" id="t27-yv-dwx">
+                    <rect key="frame" x="5" y="5" width="590" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="TP6-zz-QYv"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="TP6-zz-QYv"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="action_buttons" translatesAutoresizingMaskIntoConstraints="NO" id="i7L-bL-P0i">
+                    <rect key="frame" x="5" y="467" width="590" height="108"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ryan" translatesAutoresizingMaskIntoConstraints="NO" id="ziM-yA-Ow1">
+                    <rect key="frame" x="8" y="78" width="584" height="381"/>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="i7L-bL-P0i" secondAttribute="bottom" constant="25" id="3h6-5F-24c"/>
+                <constraint firstItem="t27-yv-dwx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="IPW-Y4-PIB"/>
+                <constraint firstItem="ziM-yA-Ow1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="NRe-4l-71C"/>
+                <constraint firstAttribute="trailing" secondItem="i7L-bL-P0i" secondAttribute="trailing" constant="5" id="Yh3-0k-YR6"/>
+                <constraint firstAttribute="trailing" secondItem="t27-yv-dwx" secondAttribute="trailing" constant="5" id="ZrD-7v-iPH"/>
+                <constraint firstItem="i7L-bL-P0i" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="bou-te-u3C"/>
+                <constraint firstAttribute="centerX" secondItem="t27-yv-dwx" secondAttribute="centerX" id="dKC-Cr-TjV"/>
+                <constraint firstAttribute="trailing" secondItem="ziM-yA-Ow1" secondAttribute="trailing" constant="8" id="psy-E5-OL2"/>
+                <constraint firstItem="i7L-bL-P0i" firstAttribute="top" secondItem="ziM-yA-Ow1" secondAttribute="bottom" constant="12" id="sxj-vM-ymZ"/>
+                <constraint firstItem="ziM-yA-Ow1" firstAttribute="top" secondItem="t27-yv-dwx" secondAttribute="bottom" constant="8" id="xXW-dg-N77"/>
+                <constraint firstItem="t27-yv-dwx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="5" id="yHj-33-LzN"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="dKC-Cr-TjV"/>
+                </mask>
+            </variation>
         </view>
     </objects>
+    <resources>
+        <image name="action_buttons" width="320" height="108"/>
+        <image name="navbar" width="320" height="65"/>
+        <image name="ryan" width="449" height="514"/>
+    </resources>
 </document>

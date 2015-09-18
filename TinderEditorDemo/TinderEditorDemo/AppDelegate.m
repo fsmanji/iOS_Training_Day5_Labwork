@@ -18,11 +18,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //If you delete storyboard, you have to create your own UIWindow, otherwise
+    //all you get is a black screen.
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    CardsViewController* mainController = [[CardsViewController alloc] initWithNibName:nil bundle:nil];
+    [window setRootViewController:mainController];
+    [window makeKeyAndVisible];
     
-    CardsViewController* mailController = [[CardsViewController alloc] initWithNibName:nil bundle:nil];
-    self.window.rootViewController = mailController;
-    [self.window makeKeyAndVisible];
-    
+    [self setWindow:window];
+     
     return YES;
 }
 
