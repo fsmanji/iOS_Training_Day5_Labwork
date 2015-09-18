@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CardsViewController.h"
+#import "ProfileViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,7 @@
     //If you delete storyboard, you have to create your own UIWindow, otherwise
     //all you get is a black screen.
     UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    CardsViewController* mainController = [[CardsViewController alloc] initWithNibName:nil bundle:nil];
+    UIViewController* mainController = [[CardsViewController alloc] initWithNibName:nil bundle:nil];
     [window setRootViewController:mainController];
     [window makeKeyAndVisible];
     

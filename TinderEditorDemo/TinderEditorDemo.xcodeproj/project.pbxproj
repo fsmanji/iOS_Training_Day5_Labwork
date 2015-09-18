@@ -13,6 +13,10 @@
 		B3A2DDC51BAC9F27006BE0DB /* TinderEditorDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A2DDC41BAC9F27006BE0DB /* TinderEditorDemoTests.m */; };
 		B3A2DDD11BAC9F92006BE0DB /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A2DDCF1BAC9F92006BE0DB /* CardsViewController.m */; };
 		B3A2DDD21BAC9F92006BE0DB /* CardsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3A2DDD01BAC9F92006BE0DB /* CardsViewController.xib */; };
+		B3A2DDD81BACA9D0006BE0DB /* DraggableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A2DDD71BACA9D0006BE0DB /* DraggableImageView.m */; };
+		B3A2DDDA1BACA9E9006BE0DB /* DraggableImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3A2DDD91BACA9E9006BE0DB /* DraggableImageView.xib */; };
+		B3A2DDDE1BACB82F006BE0DB /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A2DDDC1BACB82F006BE0DB /* ProfileViewController.m */; };
+		B3A2DDDF1BACB82F006BE0DB /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3A2DDDD1BACB82F006BE0DB /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,12 @@
 		B3A2DDCE1BAC9F92006BE0DB /* CardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsViewController.h; sourceTree = "<group>"; };
 		B3A2DDCF1BAC9F92006BE0DB /* CardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsViewController.m; sourceTree = "<group>"; };
 		B3A2DDD01BAC9F92006BE0DB /* CardsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardsViewController.xib; sourceTree = "<group>"; };
+		B3A2DDD61BACA9D0006BE0DB /* DraggableImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableImageView.h; sourceTree = "<group>"; };
+		B3A2DDD71BACA9D0006BE0DB /* DraggableImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableImageView.m; sourceTree = "<group>"; };
+		B3A2DDD91BACA9E9006BE0DB /* DraggableImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DraggableImageView.xib; sourceTree = "<group>"; };
+		B3A2DDDB1BACB82F006BE0DB /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		B3A2DDDC1BACB82F006BE0DB /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		B3A2DDDD1BACB82F006BE0DB /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +89,12 @@
 		B3A2DDA71BAC9F27006BE0DB /* TinderEditorDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B3A2DDD51BACA99E006BE0DB /* Views */,
+				B3A2DDD31BACA989006BE0DB /* ViewController */,
 				B3A2DDAC1BAC9F27006BE0DB /* AppDelegate.h */,
 				B3A2DDAD1BAC9F27006BE0DB /* AppDelegate.m */,
 				B3A2DDB51BAC9F27006BE0DB /* Images.xcassets */,
 				B3A2DDA81BAC9F27006BE0DB /* Supporting Files */,
-				B3A2DDCE1BAC9F92006BE0DB /* CardsViewController.h */,
-				B3A2DDCF1BAC9F92006BE0DB /* CardsViewController.m */,
-				B3A2DDD01BAC9F92006BE0DB /* CardsViewController.xib */,
 			);
 			path = TinderEditorDemo;
 			sourceTree = "<group>";
@@ -114,6 +123,29 @@
 				B3A2DDC31BAC9F27006BE0DB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B3A2DDD31BACA989006BE0DB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B3A2DDCE1BAC9F92006BE0DB /* CardsViewController.h */,
+				B3A2DDCF1BAC9F92006BE0DB /* CardsViewController.m */,
+				B3A2DDD01BAC9F92006BE0DB /* CardsViewController.xib */,
+				B3A2DDDB1BACB82F006BE0DB /* ProfileViewController.h */,
+				B3A2DDDC1BACB82F006BE0DB /* ProfileViewController.m */,
+				B3A2DDDD1BACB82F006BE0DB /* ProfileViewController.xib */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		B3A2DDD51BACA99E006BE0DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3A2DDD61BACA9D0006BE0DB /* DraggableImageView.h */,
+				B3A2DDD71BACA9D0006BE0DB /* DraggableImageView.m */,
+				B3A2DDD91BACA9E9006BE0DB /* DraggableImageView.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +230,8 @@
 			files = (
 				B3A2DDD21BAC9F92006BE0DB /* CardsViewController.xib in Resources */,
 				B3A2DDB61BAC9F27006BE0DB /* Images.xcassets in Resources */,
+				B3A2DDDF1BACB82F006BE0DB /* ProfileViewController.xib in Resources */,
+				B3A2DDDA1BACA9E9006BE0DB /* DraggableImageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +251,9 @@
 			files = (
 				B3A2DDAE1BAC9F27006BE0DB /* AppDelegate.m in Sources */,
 				B3A2DDD11BAC9F92006BE0DB /* CardsViewController.m in Sources */,
+				B3A2DDD81BACA9D0006BE0DB /* DraggableImageView.m in Sources */,
 				B3A2DDAB1BAC9F27006BE0DB /* main.m in Sources */,
+				B3A2DDDE1BACB82F006BE0DB /* ProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

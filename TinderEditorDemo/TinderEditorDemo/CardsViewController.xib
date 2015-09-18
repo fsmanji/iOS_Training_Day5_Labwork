@@ -7,7 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardsViewController">
             <connections>
                 <outlet property="bottomBar" destination="i7L-bL-P0i" id="Qev-xr-ig3"/>
-                <outlet property="imageView" destination="ziM-yA-Ow1" id="YLK-fu-0ZG"/>
+                <outlet property="imageView" destination="faj-n4-3WY" id="bX7-UB-e5H"/>
                 <outlet property="navBar" destination="t27-yv-dwx" id="OR9-Al-Gh5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="navbar" translatesAutoresizingMaskIntoConstraints="NO" id="t27-yv-dwx">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navbar" translatesAutoresizingMaskIntoConstraints="NO" id="t27-yv-dwx">
                     <rect key="frame" x="5" y="5" width="590" height="65"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="TP6-zz-QYv"/>
@@ -28,29 +28,29 @@
                         </mask>
                     </variation>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="action_buttons" translatesAutoresizingMaskIntoConstraints="NO" id="i7L-bL-P0i">
-                    <rect key="frame" x="5" y="467" width="590" height="108"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="action_buttons" translatesAutoresizingMaskIntoConstraints="NO" id="i7L-bL-P0i">
+                    <rect key="frame" x="5" y="487" width="590" height="108"/>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ryan" translatesAutoresizingMaskIntoConstraints="NO" id="ziM-yA-Ow1">
-                    <rect key="frame" x="8" y="78" width="584" height="381"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="ryan" translatesAutoresizingMaskIntoConstraints="NO" id="faj-n4-3WY">
+                    <rect key="frame" x="5" y="75" width="590" height="407"/>
                     <gestureRecognizers/>
                     <connections>
-                        <outletCollection property="gestureRecognizers" destination="ilt-Ez-QVH" appends="YES" id="tcv-Yk-eyS"/>
+                        <outletCollection property="gestureRecognizers" destination="6Qs-R8-NSn" appends="YES" id="QZJ-wi-Gqu"/>
                     </connections>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="i7L-bL-P0i" secondAttribute="bottom" constant="25" id="3h6-5F-24c"/>
+                <constraint firstAttribute="bottom" secondItem="i7L-bL-P0i" secondAttribute="bottom" constant="5" id="3h6-5F-24c"/>
+                <constraint firstAttribute="trailing" secondItem="faj-n4-3WY" secondAttribute="trailing" constant="5" id="5KM-Ct-1NQ"/>
+                <constraint firstItem="faj-n4-3WY" firstAttribute="top" secondItem="t27-yv-dwx" secondAttribute="bottom" constant="5" id="9SW-S3-RDG"/>
                 <constraint firstItem="t27-yv-dwx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="IPW-Y4-PIB"/>
-                <constraint firstItem="ziM-yA-Ow1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="NRe-4l-71C"/>
                 <constraint firstAttribute="trailing" secondItem="i7L-bL-P0i" secondAttribute="trailing" constant="5" id="Yh3-0k-YR6"/>
                 <constraint firstAttribute="trailing" secondItem="t27-yv-dwx" secondAttribute="trailing" constant="5" id="ZrD-7v-iPH"/>
                 <constraint firstItem="i7L-bL-P0i" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="bou-te-u3C"/>
+                <constraint firstItem="faj-n4-3WY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="cwc-f3-pzs"/>
                 <constraint firstAttribute="centerX" secondItem="t27-yv-dwx" secondAttribute="centerX" id="dKC-Cr-TjV"/>
-                <constraint firstAttribute="trailing" secondItem="ziM-yA-Ow1" secondAttribute="trailing" constant="8" id="psy-E5-OL2"/>
-                <constraint firstItem="i7L-bL-P0i" firstAttribute="top" secondItem="ziM-yA-Ow1" secondAttribute="bottom" constant="12" id="sxj-vM-ymZ"/>
-                <constraint firstItem="ziM-yA-Ow1" firstAttribute="top" secondItem="t27-yv-dwx" secondAttribute="bottom" constant="8" id="xXW-dg-N77"/>
+                <constraint firstItem="i7L-bL-P0i" firstAttribute="top" secondItem="faj-n4-3WY" secondAttribute="bottom" constant="5" id="w0W-Eg-v1f"/>
                 <constraint firstItem="t27-yv-dwx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="5" id="yHj-33-LzN"/>
             </constraints>
             <variation key="default">
@@ -59,9 +59,9 @@
                 </mask>
             </variation>
         </view>
-        <panGestureRecognizer minimumNumberOfTouches="1" id="ilt-Ez-QVH">
+        <panGestureRecognizer minimumNumberOfTouches="1" id="6Qs-R8-NSn">
             <connections>
-                <action selector="onPanImage:" destination="-1" id="uey-u8-ypF"/>
+                <action selector="onPan:" destination="-1" id="fUX-6r-ine"/>
             </connections>
         </panGestureRecognizer>
     </objects>
