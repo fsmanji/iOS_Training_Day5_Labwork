@@ -42,7 +42,7 @@
             break;
         case UIGestureRecognizerStateEnded:
         {
-            CGPoint transition = [sender translationInView:_imageView];
+            
             _imageView.center = CGPointMake(_cardInitialCenter.x, _cardInitialCenter.y);
             
             [self presentProfileView];
@@ -55,6 +55,9 @@
 }
 - (void)presentProfileView {
     ProfileViewController* profile = [[ProfileViewController alloc] init];
+    profile.image = [UIImage imageNamed:@"ryan"];;
+    //profile.modalPresentationStyle = UIModalPresentationPopover;
+    profile.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     [self presentViewController:profile animated:YES completion:nil];
 }
 

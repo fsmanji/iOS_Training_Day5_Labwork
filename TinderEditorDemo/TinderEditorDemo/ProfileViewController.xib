@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController">
             <connections>
+                <outlet property="imageView" destination="Mdl-Ns-730" id="jdY-Sb-4mq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,12 +22,17 @@
                         <outletCollection property="gestureRecognizers" destination="lFT-aE-fTK" appends="YES" id="B3n-Ln-UCh"/>
                     </connections>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryan" translatesAutoresizingMaskIntoConstraints="NO" id="Mdl-Ns-730">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mdl-Ns-730">
                     <rect key="frame" x="5" y="75" width="590" height="514"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="7Ah-tm-M83" appends="YES" id="3RH-U5-gzI"/>
+                    </connections>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="Mdl-Ns-730" secondAttribute="bottom" constant="11" id="4Ge-bf-wYD"/>
                 <constraint firstAttribute="trailing" secondItem="Mdl-Ns-730" secondAttribute="trailing" constant="5" id="8wg-ko-f8t"/>
                 <constraint firstItem="Mdl-Ns-730" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="9uG-hX-Q7w"/>
                 <constraint firstItem="h3B-Mn-224" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="5" id="NOD-Iw-xvp"/>
@@ -40,9 +46,13 @@
                 <action selector="onTapDone:" destination="-1" id="3Xi-D9-nR7"/>
             </connections>
         </tapGestureRecognizer>
+        <rotationGestureRecognizer id="7Ah-tm-M83">
+            <connections>
+                <action selector="onRotation:" destination="-1" id="PaB-xo-Kyo"/>
+            </connections>
+        </rotationGestureRecognizer>
     </objects>
     <resources>
         <image name="navbar2" width="320" height="65"/>
-        <image name="ryan" width="449" height="514"/>
     </resources>
 </document>
